@@ -1,0 +1,31 @@
+*.iml
+.gradle
+.DS_Store
+/captures
+.externalNativeBuild
+.cxx
+local.properties
+
+# Build outputs
+/build
+**/build/
+**/release/
+*.apk
+*.aab
+*.ap_
+*.dex
+
+# IDE
+.idea/caches
+.idea/libraries
+.idea/modules.xml
+.idea/workspace.xml
+.idea/navEditor.xml
+.idea/assetWizardSettings.xml
+.idea/deviceManager.xml
+.idea/deploymentTargetSelector.xml
+
+# Keystores / secrets
+*.jks
+*.keystore
+*.pem

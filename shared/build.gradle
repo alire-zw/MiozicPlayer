@@ -1,0 +1,36 @@
+plugins {
+    id 'com.android.library'
+    id 'org.jetbrains.kotlin.android'
+}
+android {
+    namespace 'com.rero.miozicplayer.shared'
+    compileSdk 36
+
+    defaultConfig {
+        minSdk 28
+        targetSdk 36
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+    kotlinOptions {
+        jvmTarget = '11'
+    }
+    lint {
+        checkReleaseBuilds false
+        abortOnError false
+    }
+}
+
+afterEvaluate {
+    tasks.matching { task ->
+        task.name.contains("extractReleaseAnnotations") ||
+            task.name.contains("lintVital")
+    }.configureEach { enabled = false }
+}
+dependencies {
+    implementation libs.androidx.media
+}

@@ -1,0 +1,4 @@
+<resources>
+
+    <style name="Theme.MiozicPlayer" parent="android:Theme.Material.Light.DarkActionBar" />
+</resources>
